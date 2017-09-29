@@ -28,8 +28,8 @@
    
 </head>
 <body>
-   <section class="main">
-        <div class="container">
+   <section class="main" id="#home">
+        <div class="container">   
         <header>
         <div class="logo">
                 <img src="img/logo.png" alt="logo">
@@ -38,16 +38,16 @@
                 <ul>
                 
             <li><a href="#home" class="active">home</a></li>
-            <li><a href="#about">about</a></li>
-            <li><a href="#work">work</a></li>
-        <li><a href="#process">process</a></li>
-    <li><a href="#services">services</a></li>
-<li><a href="#testimonials">testimonials</a></li>
-<li><a href="#contact">contact</a></li>
+<li><a href=".about" class="ancLinks">about</a></li>
+<li><a href=".works" class="ancLinks">work</a></li>
+<li><a href=".our-works" class="ancLinks">process</a></li>
+    <li><a href=".services" class="ancLinks">services</a></li>
+<li><a href=".testimonials" class="ancLinks">testimonials</a></li>
+<li><a href=".need" class="ancLinks">contact</a></li>
                 </ul>
             </div>
-        </header>
-        
+            
+        </header>   
         <section class="main-content">
             <h1>We Design and Develop</h1>
             <p>We are a new design studio based in USA. We have over 
@@ -127,29 +127,51 @@ heaven fruit, dominion she'd won't very all.</p>
                  <div class="works-boxes">
    <ul>
 <li><span class="descr">
-    <a data-fancybox="gallery" href="img/dg.png"><img src="img/pe-7s-look.png"></a>
-</span><img src="img/dg.png" alt=""></li>
+    <a data-fancybox="gallery" href="http://lorempixel.com/1200/800"><img src="img/pe-7s-look.png"></a>
+</span>
+<img src="http://lorempixel.com/330/300/"
+srcset="http://lorempixel.com/800/300/ 800w"></li>
+
+
+
+
 <li><span class="descr">
-    <a data-fancybox="gallery" href="img/dg.png"><img src="img/pe-7s-look.png"></a>
-</span><img src="img/lg.png" alt=""></li>
+    <a data-fancybox="gallery" href="http://lorempixel.com/1200/800"><img src="img/pe-7s-look.png"></a>
+</span>
+<img src="http://lorempixel.com/330/300/"
+srcset="http://lorempixel.com/800/300/ 800w"></li>
+
 <li><span class="descr">
-    <a data-fancybox="gallery" href="img/dg.png"><img src="img/pe-7s-look.png"></a>
-</span><img src="img/dg.png" alt=""></li>
+    <a data-fancybox="gallery" href="http://lorempixel.com/1200/800"><img src="img/pe-7s-look.png"></a>
+</span>
+<img src="http://lorempixel.com/330/300/"
+srcset="http://lorempixel.com/800/300/ 800w"></li>
+
 <li><span class="descr">
-    <a data-fancybox="gallery" href="img/dg.png"><img src="img/pe-7s-look.png"></a>
-</span><img src="img/lg.png" alt=""></li>
+    <a data-fancybox="gallery" href="http://lorempixel.com/1200/800"><img src="img/pe-7s-look.png"></a>
+</span>
+<img src="http://lorempixel.com/330/300/"
+srcset="http://lorempixel.com/800/300/ 800w"></li>
 <li><span class="descr">
-    <a data-fancybox="gallery" href="img/dg.png"><img src="img/pe-7s-look.png"></a>
-</span><img src="img/dg.png" alt=""></li>
+    <a data-fancybox="gallery" href="http://lorempixel.com/1200/800"><img src="img/pe-7s-look.png"></a>
+</span>
+<img src="http://lorempixel.com/330/300/"
+srcset="http://lorempixel.com/800/300/ 800w"></li>
 <li><span class="descr">
-    <a data-fancybox="gallery" href="img/dg.png"><img src="img/pe-7s-look.png"></a>
-</span><img src="img/lg.png" alt=""></li>
+    <a data-fancybox="gallery" href="http://lorempixel.com/1200/800"><img src="img/pe-7s-look.png"></a>
+</span>
+<img src="http://lorempixel.com/330/300/"
+srcset="http://lorempixel.com/800/300/ 800w"></li>
 <li><span class="descr">
-    <a data-fancybox="gallery" href="img/dg.png"><img src="img/pe-7s-look.png"></a>
-</span><img src="img/dg.png" alt=""></li>
+    <a data-fancybox="gallery" href="http://lorempixel.com/1200/800"><img src="img/pe-7s-look.png"></a>
+</span>
+<img src="http://lorempixel.com/330/300/"
+srcset="http://lorempixel.com/800/300/ 800w"></li>
 <li><span class="descr">
-    <a data-fancybox="gallery" href="img/dg.png"><img src="img/pe-7s-look.png"></a>
-</span><img src="img/lg.png" alt=""></li>
+    <a data-fancybox="gallery" href="http://lorempixel.com/1200/800"><img src="img/pe-7s-look.png"></a>
+</span>
+  <img src="http://lorempixel.com/330/300/"
+srcset="http://lorempixel.com/800/300/ 800w"></li>
    </ul>
                  </div>
                  <a href="#" class="btn-more">Load more works</a>
@@ -174,7 +196,6 @@ third sixth gathered female creeping bearing behold years.</p>
          </div>
          </div>
      </section>
-     
      <section class="services">
          <div class="container">
              <div class="services-content">
@@ -347,6 +368,16 @@ function play() {
         overlay.className = "";
     }
 } 
+    </script>
+    <script type="text/javascript">
+  $(document).ready(function() {
+    $("a.ancLinks").click(function () { 
+      var elementClick = $(this).attr("href");
+      var destination = $(elementClick).offset().top;
+      $('html,body').animate( { scrollTop: destination }, 1100 );
+      return false;
+    });
+  });
     </script>
     
 
